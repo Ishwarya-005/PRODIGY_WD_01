@@ -2,11 +2,13 @@ body {
   background-color: #FFF2F2;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  height: 100vh; 
+  height: 100vh;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
+  overflow: hidden; 
 }
+
 .header {
   width: 100%;
   display: flex;
@@ -15,11 +17,11 @@ body {
   padding: 15px 20px;
   background-color: #FFF8F8;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  height: 60px; 
-  position: fixed; 
+  height: 60px;
+  position: fixed;
   top: 0;
   left: 0;
-  height:20px;
+  z-index: 1000;
 }
 
 .logo {
@@ -27,6 +29,7 @@ body {
   font-weight: 600;
   color: #2D336B;
 }
+
 .nav {
   display: flex;
   gap: 40px;
@@ -65,7 +68,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; 
+  height: 100vh; 
   text-align: center;
 }
 
@@ -81,4 +84,40 @@ body {
 .center-text:hover {
   transform: scale(1.08);
   cursor: pointer;
+}
+
+
+.about-section {
+  padding: 100px 20px;
+  background-color: #FFF2F2; 
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100vh; 
+  left: 0;
+  width: 100%;
+  transition: top 0.5s ease-in-out; 
+}
+
+.about-content {
+  background-color: white; 
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.about-section h2 {
+  font-size: 2.5em;
+  color: #2D336B;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  color: #2D336B;
+  line-height: 1.6;
 }
