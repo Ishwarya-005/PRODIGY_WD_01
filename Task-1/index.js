@@ -1,14 +1,17 @@
+function handleNavigation(event, targetId) {
+    event.preventDefault(); 
 
-document.querySelector('a[href="#about"]').addEventListener('click', function (e) {
-    e.preventDefault(); 
-
-
-    document.body.style.overflow = 'auto';
-
-    const aboutSection = document.getElementById('about');
-    aboutSection.style.top = '0';
-
-
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
+ 
+    if (targetId === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+    }
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href').substring(1); 
+        handleNavigation(e, targetId);
+    });
 });
-

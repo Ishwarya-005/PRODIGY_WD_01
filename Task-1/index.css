@@ -3,10 +3,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden; 
+  overflow: auto; 
 }
 
 .header {
@@ -63,12 +60,11 @@ body {
 .nav-link:hover::after {
   transform: scaleX(1);
 }
-
-.center-container {
+.home-section {
+  height: 100vh ;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
   text-align: center;
 }
 
@@ -87,22 +83,24 @@ body {
 }
 
 
-.about-section {
+.about-section,
+.services-section,
+.contact-section {
   padding: 100px 20px;
   background-color: #FFF2F2; 
+  text-align: center;
   height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
   top: 100vh; 
-  left: 0;
-  width: 100%;
-  transition: top 0.5s ease-in-out; 
 }
 
-.about-content {
+.about-content,
+.services-content,
+.contact-content {
   background-color: white; 
   padding: 40px;
   border-radius: 10px;
@@ -110,13 +108,17 @@ body {
   max-width: 600px;
 }
 
-.about-section h2 {
+.about-section h2,
+.services-section h2,
+.contact-section h2 {
   font-size: 2.5em;
   color: #2D336B;
   margin-bottom: 20px;
 }
 
-.about-section p {
+.about-section p,
+.services-section p,
+.contact-section p {
   font-size: 1.2em;
   color: #2D336B;
   line-height: 1.6;
